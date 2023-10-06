@@ -52,17 +52,21 @@ export default function MenuPage() {
                       Edit Materi
                     </span>
                   </Link>
+                  <Link
+                    className="text-teal-200 bg-teal-400 bg-opacity-30 px-6 py-2 rounded-full"
+                    href={{
+                      pathname: '/game',
+                      query: {
+                        title: materi.title
+                      }
+                    }}
+                  >
+                    <span className="text-sm font-semibold ">
+                      Edit Games
+                    </span>
+                  </Link>
                 </div>
-                <Button
-                  radius="full"
-                  variant="flat"
-                  className="text-teal-200 bg-teal-400 bg-opacity-30"
-                  type="submit"
-                >
-                  <span className="text-sm font-semibold ">
-                    Edit Games
-                  </span>
-                </Button>
+
               </CardFooter>
             </Card>
           ))
