@@ -54,8 +54,8 @@ export default function HistoryContent({ histories }: props) {
     return (
         <div>
             {
-                histories.map((history) => (
-                    <div className="flex flex-wrap space-x-4 justify-center mb-2">
+                histories.map((history, index) => (
+                    <div className="flex flex-wrap space-x-4 justify-center mb-2" key={index}>
                         <div className='flex flex-grow '>
                             <p className="text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-500 pr-2">
                                 {history.idGame}

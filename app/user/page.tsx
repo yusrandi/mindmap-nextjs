@@ -11,8 +11,11 @@ import { EyeSlashFilledIcon } from "@/icons/EyeSlashFilledIcon";
 import { EyeFilledIcon } from "@/icons/EyeFilledIcon";
 import { getDatabase, onValue, ref, set } from "firebase/database";
 import { NotificationIcon } from "@/icons/NotificationIcon";
-import UserStatistik from "./statistik";
+// import UserStatistik from "./statistik";
 import { HistoriesData } from "@/data/HistoriesData";
+import dynamic from "next/dynamic";
+
+const UserStatistik = dynamic(() => import('./statistik'), { ssr: false })
 
 let usersRef = collection(firestore, "users")
 const emptyUser: UserType = {

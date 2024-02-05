@@ -20,7 +20,6 @@ export default function DropZone() {
     const baseStyle = {
         flex: 1,
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
         padding: '20px',
         borderWidth: 2,

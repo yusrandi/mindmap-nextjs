@@ -7,7 +7,10 @@ import { CardAgents } from "./card-agents";
 import { CardTransactions } from "./card-transactions";
 import { Link } from "@nextui-org/react";
 import NextLink from "next/link";
-import HomeCart from "./cart";
+// import HomeCart from "./cart";
+
+const HomeCart = dynamic(() => import('./cart'), { ssr: false })
+
 
 export const HomePage = () => (
   <main>

@@ -10,23 +10,25 @@ async function getPosts() {
 }
 
 export default async function Posts() {
-  const data: {
-    id: string;
-    content: string;
-    user: User;
-    createdAt: string;
-    likes: Like[];
-    comments: {
-      id: string;
-      user: User;
-      createdAt: string;
-      content: string;
-    }[];
-  }[] = await getPosts();
+  // const data: {
+  //   id: string;
+  //   content: string;
+  //   user: User;
+  //   createdAt: string;
+  //   likes: Like[];
+  //   comments: {
+  //     id: string;
+  //     user: User;
+  //     createdAt: string;
+  //     content: string;
+  //   }[];
+  // }[] = await getPosts();
   // console.log(data);
   return (
     <main>
-      <Feed posts={data} />
+      <h1 className="font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-pink-500">
+        Post Page
+      </h1>
     </main>
   );
 }
